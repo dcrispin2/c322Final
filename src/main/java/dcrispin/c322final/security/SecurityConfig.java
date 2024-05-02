@@ -1,4 +1,4 @@
-package security;
+package dcrispin.c322final.security;
 
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.jwk.JWKSet;
@@ -51,9 +51,9 @@ public class SecurityConfig {
                 .csrf(x -> x.disable())
                 .authorizeHttpRequests( auth -> auth
                         .requestMatchers(
-                                HttpMethod.POST,"/signup", "/signin").permitAll()
+                                HttpMethod.POST,"/signup", "/login", "/store/order").permitAll()
                         .requestMatchers(
-                                HttpMethod.GET,"/").permitAll()
+                                HttpMethod.GET,"/", "/store/flowers").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session ->

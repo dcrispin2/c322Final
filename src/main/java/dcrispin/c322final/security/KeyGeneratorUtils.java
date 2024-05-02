@@ -1,4 +1,4 @@
-package security;
+package dcrispin.c322final.security;
 
 import org.springframework.stereotype.Component;
 

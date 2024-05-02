@@ -1,12 +1,12 @@
-package security;
+package dcrispin.c322final.security;
 
-import model.Customer;
+import dcrispin.c322final.model.Customer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-import repository.CustomerRepository;
+import dcrispin.c322final.repository.CustomerRepository;
 
 @Component
 public class UserDetailsSecurityService implements

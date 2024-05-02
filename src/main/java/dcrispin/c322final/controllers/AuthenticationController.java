@@ -1,14 +1,14 @@
-package controllers;
+package dcrispin.c322final.controllers;
 
 
-import model.Customer;
+import dcrispin.c322final.model.Customer;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import repository.CustomerRepository;
-import security.TokenService;
+import dcrispin.c322final.repository.CustomerRepository;
+import dcrispin.c322final.security.TokenService;
 
 @RestController
 @CrossOrigin

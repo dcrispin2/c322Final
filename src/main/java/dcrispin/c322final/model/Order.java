@@ -1,8 +1,10 @@
-package model;
+package dcrispin.c322final.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.util.Random;
 
 @Entity
 @Table(schema = "flowers")
@@ -12,7 +14,9 @@ public class Order {
     //the first name and last name of the recipient
     //and the status.
 
+
     @Id
+    private int serial;
     private String username;
     private String flower;
     private double price;
@@ -22,13 +26,14 @@ public class Order {
 
     public Order() {}
 
-    public Order(String flower, double price, String fName, String lName, String status, String delivery, String username) {
+    public Order(int serial, String flower, double price, String fName, String lName, String status, String delivery, String username) {
         this.flower = flower;
         this.price = price;
         this.fName = fName;
         this.lName = lName;
         this.status = status;
         this.username = username;
+        this.serial = serial;
     }
 
     public String getUsername() {
@@ -77,5 +82,13 @@ public class Order {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getSerial() {
+        return serial;
+    }
+
+    public void setSerial(int serial) {
+        this.serial = serial;
     }
 }

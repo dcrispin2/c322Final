@@ -1,13 +1,13 @@
-package controllers;
+package dcrispin.c322final.controllers;
 
-import model.Customer;
-import model.Flower;
-import model.Order;
+import dcrispin.c322final.model.Customer;
+import dcrispin.c322final.model.Flower;
+import dcrispin.c322final.model.Order;
 import org.springframework.web.bind.annotation.*;
-import repository.*;
+import dcrispin.c322final.repository.*;
 
-import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @CrossOrigin
@@ -24,6 +24,7 @@ public class StoreController {
     private FlowersRepository flowersRepository;
     private OrdersFileRepository ordersFileRepository;
     private OrdersRepository ordersRepository;
+    Random rnd = new Random();
     //private CustomerRepository customerRepository;
 
     public StoreController(//FlowersFileRepository flowersFileRepository,
@@ -44,7 +45,7 @@ public class StoreController {
         return flowersRepository.findAll();
     }
 
-    @PostMapping("/orders")
+    @PostMapping("/order")
     public void saveOrder(@RequestBody Order order){
         try {ordersRepository.save(order);}
         catch (Exception e) {throw new RuntimeException(e);}

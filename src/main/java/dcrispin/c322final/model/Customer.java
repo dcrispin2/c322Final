@@ -1,4 +1,4 @@
-package model;
+package dcrispin.c322final.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

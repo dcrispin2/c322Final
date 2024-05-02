@@ -1,8 +1,10 @@
-package model;
+package dcrispin.c322final.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.util.Random;
 
 @Entity
 @Table(schema = "flowers")
@@ -12,7 +14,9 @@ public class Flower {
     //occasions: Mother's day, birthday, thank you
     //colors: mixed, red, yellow, green, orange
     //sorting options: price:low to high, price:high to low
+
     @Id
+    private String name;
     private String type;
     private String occasion;
     private String color;
@@ -20,7 +24,8 @@ public class Flower {
 
     public Flower() {};
 
-    public Flower(String type, String occasion, String color, double price) {
+    public Flower(String name, String type, String occasion, String color, double price) {
+        this.name = name;
         this.type = type;
         this.occasion = occasion;
         this.color = color;
@@ -57,5 +62,13 @@ public class Flower {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

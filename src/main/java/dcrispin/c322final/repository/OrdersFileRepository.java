@@ -1,9 +1,12 @@
-package repository;
+package dcrispin.c322final.repository;
 
-import model.Order;
+import dcrispin.c322final.model.Order;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
+@Component
 
 public class OrdersFileRepository {
     OrdersRepository ordersRepository;
