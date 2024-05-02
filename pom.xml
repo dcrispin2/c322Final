@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from dcrispin.c322final.repository -->
 	</parent>
 	<groupId>edu.iu.dcrispin</groupId>
-	<artifactId>C322Final</artifactId>
+	<artifactId>C322final</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>C322Final</name>
 	<description>C322 Final</description>
