@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="C322Final" />
         <module name="lab10" />
+        <module name="C322final" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="C322Final" target="17" />
+      <module name="C322final" target="17" />
       <module name="lab10" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="C322Final" options="-parameters" />
+      <module name="C322final" options="-parameters" />
       <module name="lab10" options="-parameters" />
     </option>
   </component>
